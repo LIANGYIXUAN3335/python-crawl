@@ -28,17 +28,17 @@ for i in range(0,7):
                 file2.write(j)
         num+=1
     print(list1)
-        # print("第%d页第%d个校花下载成功"%(num1,num))
-##a.pop("searchFilter")
-##b = a["list"]
-##for i in b:
-##    print("年龄："+str(i["age"])+"体重"+str(i["avoirdupois"])+"性别"+str(i["sex"])+"星座："+i['constellationName']+
-##          "姓名："+i["nick"]+"身高"+str(i["stature"])+"城市"+i['cityName']+"学历"+i['degreeName']+"星座"+i[ 'constellationName'])
-##    with open("./photo/%s"%i["nick"],"wb") as file:
-##        url = i[ 'photoUri']
-##        photo = requests.get(url,headers = headers,stream =True)
-##        for i in photo.iter_content(1024):
-##            file.write(i)
+    print("第%d页第%d个校花下载成功"%(num1,num))
+a.pop("searchFilter")
+b = a["list"]
+for i in b:
+    print("年龄："+str(i["age"])+"体重"+str(i["avoirdupois"])+"性别"+str(i["sex"])+"星座："+i['constellationName']+
+          "姓名："+i["nick"]+"身高"+str(i["stature"])+"城市"+i['cityName']+"学历"+i['degreeName']+"星座"+i[ 'constellationName'])
+    with open("./photo/%s"%i["nick"],"wb") as file:
+        url = i[ 'photoUri']
+        photo = requests.get(url,headers = headers,stream =True)
+        for i in photo.iter_content(1024):
+            file.write(i)
 
-##http://www.xiaohuar.com
+#http://www.xiaohuar.com
 ##/d/file/20191017/127c698a931462c55df8aa0ad65d208c.jpg
